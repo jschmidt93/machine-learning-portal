@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+    include("connection.php");
+    include("functions.php");
+
+    $user_data = check_login($con);
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en" style="background-color: #1c1c1c">
 <head>
@@ -61,7 +72,8 @@
           <option value="Intermediate">Intermediate</option>
           <option value="Expert">Expert</option>
         </select>
-        <button type="button" class="home-button button">Login</button>
+        <a href="login.php">
+        <button type="button" class="home-button button">Login</button></a>
         <a href="admin.php">
         <svg viewBox="0 0 1024 1024" class="home-icon04">
           <path
