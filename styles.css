@@ -1,3 +1,69 @@
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+  text-decoration:none;
+}
+
+svg {
+  color: #fff;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+
+.trigger_search{
+  background:#f7b733;
+  border: 0;
+  border-radius: 100px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  outline: 0;
+  cursor: pointer;
+
+}
+
+form {
+  background-color:#333333;
+  width: 300px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+i{
+  font-size: 24px;
+}
+
+input {
+  all: unset;
+  font: 16px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+.input-open{
+  width: 5px;
+  padding: 0;
+
+}
+
+.search-wrapper{
+  display: flex;
+}
+
 .navigation-links-nav {
     flex: 0 0 auto;
     display: flex;
@@ -274,6 +340,26 @@
     
     background-color: #f7b733;
   }
+
+  .login-button{
+
+    color: #f5efef;
+    margin: var(--dl-space-space-unit);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+    align-self: center;
+    font-style: normal;
+    transition: 0.3s;
+    font-weight: 600;
+    border-radius: 10px;
+    text-transform: capitalize;
+    
+    background-color: #f7b733;
+  }
+ 
   .home-button:hover {
     background-color: #fc4a1a;
   }

@@ -16,6 +16,7 @@ session_start();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/81c2c05f29.js"></script>
   <title>Machine Learning Portal</title>
 </head>
 <div>
@@ -28,7 +29,7 @@ session_start();
           class="home-image"
         />
         <a
-          href="https://example.com" 
+          href="index.php" 
           target="_blank"
           rel="noreferrer noopener"
           class="home-link"
@@ -36,7 +37,7 @@ session_start();
           Home
         </a>
         <a
-          href="https://example.com"
+          href="about.php"
           target="_blank"
           rel="noreferrer noopener"
           class="home-link1"
@@ -45,7 +46,7 @@ session_start();
           <br />
         </a>
         <a
-          href="https://example.com"
+          href="get-help.php"
           target="_blank"
           rel="noreferrer noopener"
           class="home-link2"
@@ -60,11 +61,12 @@ session_start();
               ></path>
             </svg>
           </div>
-          <svg viewBox="0 0 1024 1024" class="home-icon02">
-            <path
-              d="M684.416 676.523c-1.451 1.109-2.859 2.347-4.224 3.712s-2.56 2.731-3.712 4.224c-53.675 51.755-126.677 83.541-207.147 83.541-82.475 0-157.099-33.365-211.2-87.467s-87.467-128.725-87.467-211.2 33.365-157.099 87.467-211.2 128.725-87.467 211.2-87.467 157.099 33.365 211.2 87.467 87.467 128.725 87.467 211.2c0 80.469-31.787 153.472-83.584 207.189zM926.165 865.835l-156.8-156.8c52.523-65.707 83.968-149.035 83.968-239.701 0-106.027-43.008-202.069-112.469-271.531s-165.504-112.469-271.531-112.469-202.069 43.008-271.531 112.469-112.469 165.504-112.469 271.531 43.008 202.069 112.469 271.531 165.504 112.469 271.531 112.469c90.667 0 173.995-31.445 239.701-83.968l156.8 156.8c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"
-            ></path>
-          </svg>
+          <form id="form" role="search">
+  <input type="search" id="query" name="q"
+   placeholder="Search..."
+   aria-label="Search through site content">
+  <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+</form>
         </div>
         <select class="home-select">
           <option value="All" selected>Choose Skill Level</option>
@@ -73,7 +75,7 @@ session_start();
           <option value="Expert">Expert</option>
         </select>
         <a href="login.php">
-        <button type="button" class="home-button button">Login</button></a>
+        <button type="button" class="home-button button" class="login-button">Login</button></a>
         <a href="admin.php">
         <svg viewBox="0 0 1024 1024" class="home-icon04">
           <path
@@ -257,3 +259,23 @@ session_start();
     </div>
   </div>
   
+  <?php
+
+  $con = new PDO("mysql:host=localhost; dbname=portal_user_db", 'root', '');
+
+if(isset($_POST["submit"])){
+  $str = $_POST["search"];
+  $sth = $con->prepare("SELECT * FROM 'learning_nodes' WHERE subject = '$str'");
+
+  $sth->setFetchMode(PDO:: FETCH_OBJ);
+  $sth-> execute();
+
+  if($row = $sth->fetch()){
+
+    echo $row->subject;
+    echo $row->description;
+
+    
+  }
+}
+?>

@@ -109,7 +109,7 @@ border-radius: 8px;
         <img src="https://i.postimg.cc/Pf3ndv6Q/PortalML.png" width=100%>
 
         <form method ="POST">
-        <div style="font-size: 20px; margin: 10px; color:#F7B733">Create Account</div>
+        <div style="font-size: 20px; margin: 10px; color:#F7B733;">Create Account</div>
             <input id="text" type="text" name="user_name" placeholder="Username"><br><br>
             <input id="text" type="password" name="password" placeholder="Password"><br><br>
 
