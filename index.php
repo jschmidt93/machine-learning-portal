@@ -68,20 +68,10 @@ session_start();
   <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
 </form>
         </div>
-        <select class="home-select">
-          <option value="All" selected>Choose Skill Level</option>
-          <option value="Beginner">Beginner</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Expert">Expert</option>
-        </select>
         <a href="login.php">
         <button type="button" class="home-button button" class="login-button">Login</button></a>
         <a href="admin.php">
-        <svg viewBox="0 0 1024 1024" class="home-icon04">
-          <path
-            d="M512 662q62 0 106-44t44-106-44-106-106-44-106 44-44 106 44 106 106 44zM830 554l90 70q14 10 4 28l-86 148q-8 14-26 8l-106-42q-42 30-72 42l-16 112q-4 18-20 18h-172q-16 0-20-18l-16-112q-38-16-72-42l-106 42q-18 6-26-8l-86-148q-10-18 4-28l90-70q-2-14-2-42t2-42l-90-70q-14-10-4-28l86-148q8-14 26-8l106 42q42-30 72-42l16-112q4-18 20-18h172q16 0 20 18l16 112q38 16 72 42l106-42q18-6 26 8l86 148q10 18-4 28l-90 70q2 14 2 42t-2 42z"
-          ></path>
-        </svg>
+          <button type="button" class="admin-button">Admin</button>
         </a>
         <div data-type="MobileMenu" class="home-mobile-menu">
           <nav class="home-nav">
@@ -99,17 +89,6 @@ session_start();
                 </svg>
               </div>
             </div>
-            <NavigationLinks>
-              <nav
-                class="navigation-links-nav navigation-links-root-class-name13"
-              >
-                <span class="navigation-links-text"><span>About</span></span>
-                <span class="navigation-links-text1"><span>Features</span></span>
-                <span class="navigation-links-text2"><span>Pricing</span></span>
-                <span class="navigation-links-text3"><span>Team</span></span>
-                <span class="navigation-links-text4"><span>learning</span></span>
-              </nav>
-            </NavigationLinks>
           </nav>
           <div>
             <svg viewBox="0 0 950.8571428571428 1024" class="home-icon08">
