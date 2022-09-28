@@ -1,4 +1,8 @@
-
+.search-button{
+  background-color:#f7b733;
+  outline: none;
+  border-style:none;
+}
 
 svg {
   color: #fff;
