@@ -318,6 +318,10 @@ input {
     width: 168px;
     height: 38px;
     border-radius: var(--dl-radius-radius-radius4);
+    margin-left: 20px;
+    margin-top: 5px;
+    background-color:#4d4d4d;
+    color:lightgray;
   }
   .home-button {
     color: #f5efef;
