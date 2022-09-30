@@ -6,6 +6,7 @@ include("connection.php");
 include("functions.php");
 
 $loginAttemptStatus = "";
+$isAdmin = false;
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
 
@@ -29,6 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 
                     $loginAttemptStatus = "Login Successfull";
+                    $isAdmin = true;
                     $_SESSION['user_id'] = $user_data['user_id'];
                     header("Location: index.php");
                     die;
