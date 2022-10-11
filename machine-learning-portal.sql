@@ -55,27 +55,27 @@ INSERT INTO `instructor` (`userID`, `username`, `userPassWord`, `displayName`, `
 CREATE TABLE `resources` (
   `id` int(11) NOT NULL,
   `topics` varchar(100) DEFAULT NULL,
-  `Description` varchar(2000) DEFAULT NULL,
-  `Type` varchar(255) DEFAULT NULL,
+  `description` varchar(2000) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
   `keywords` varchar(20) DEFAULT NULL,
-  `Links` varchar(500) DEFAULT NULL,
-  `userID` varchar(20) DEFAULT NULL
+  `link` varchar(500) DEFAULT NULL,
+  `user_id` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `resources`
 --
 
-INSERT INTO `resources` (`id`, `topics`, `Description`, `Type`, `keywords`, `Links`, `userID`) VALUES
+INSERT INTO `resources` (`id`, `topics`, `description`, `type`, `keywords`, `link`, `user_id`) VALUES
 (1, 'Gaussian Processes', 'a generic supervised learning method designed to solve regression and probabilistic classification problems.', 
-'Supervised learning', 'GPR', 'https://scikit-learn.org/stable/modules/gaussian_process.html#:~:text=Gaussian%20Processes%20(GP)%20are%20a,at%20least%20for%20regular%20kernels).', '1'),
-(2, 'Naive Bayes', 'Is a classification algorithm that uses Bayes theorem', 'supervised learning', 
+'Supervised Learning', 'GPR', 'https://scikit-learn.org/stable/modules/gaussian_process.html#:~:text=Gaussian%20Processes%20(GP)%20are%20a,at%20least%20for%20regular%20kernels).', '1'),
+(2, 'Naive Bayes', 'Is a classification algorithm that uses Bayes theorem', 'Supervised Learning', 
 'Bayes', 'https://scikit-learn.org/stable/modules/naive_bayes.html', '2'),
-(3, 'Cross decomposition', 'Is an algorithm that will find the similaries between two matrices', 'supervised learning', 'matrices', 'https://scikit-learn.org/stable/modules/cross_decomposition.html', '3'),
-(4, 'Decision Trees', 'Are used for classicfication and regression methods', 'supervised learning ', 'Tree', 'https://scikit-learn.org/stable/modules/tree.html', '4'),
+(3, 'Cross decomposition', 'Is an algorithm that will find the similaries between two matrices', 'Supervised Learning', 'matrices', 'https://scikit-learn.org/stable/modules/cross_decomposition.html', '3'),
+(4, 'Decision Trees', 'Are used for classicfication and regression methods', 'Supervised Learning ', 'Tree', 'https://scikit-learn.org/stable/modules/tree.html', '4'),
 (5, 'Clustering', 'These algorithms have two parts one that trains the data. The other that trains the data', 
-'Unsupervised learning', 'Unsupervised learning', 'https://scikit-learn.org/stable/modules/clustering.html', '5'),
-(6, 'Manifold learning', 'Data in these sets take a non leaner approach', 'Unsupervised learning', 'Unsupervised learning', 'https://scikit-learn.org/stable/modules/manifold.html', '6'),
+'Unsupervised Learning', 'Unsupervised Learning', 'https://scikit-learn.org/stable/modules/clustering.html', '5'),
+(6, 'Manifold learning', 'Data in these sets take a non leaner approach', 'Unsupervised Learning', 'Unsupervised Learning', 'https://scikit-learn.org/stable/modules/manifold.html', '6'),
 (7, 'Gaussian mixture models', 'Is a model that takes into account the possible of mixted finite numbers for data sets. It generates their proablilty ', 'Unsupervised learning', 'Unsupervised learning, Gaussian', 'https://www.walmart.com/', '7'),
 (8, 'Biclustering', 'It will cluster rows and columns of matrixs', 'Unsupervised learning ', 'Unsupervised learning, clustering', 'https://www.miamidolphins.com/', '8'),
 (9, 'Density Estimation', 'Can use models like Gaussian Mixtures or kernel density. To estimate the density of data sets.', 'Unsupervised learning', 'Unsupervised learning', 'https://scikit-learn.org/stable/modules/density.html', '9'),
